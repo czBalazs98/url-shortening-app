@@ -1,0 +1,21 @@
+<div class="flex px-12 sm:px-24 py-6 mb-12">
+
+  <div class="flex flex-grow space-x-8 items-center">
+    <img [ngSrc]="'assets/images/logo.svg'" alt="shortly logo" height="33" width="121">
+
+    <div *ngIf="!isMobile" class="space-x-8">
+      <a href="#">Features</a>
+
+      <a href="#">Pricing</a>
+
+      <a href="#">Resources</a>
+    </div>
+  </div>
+
+  <div *ngIf="!isMobile" class="flex space-x-8 items-center">
+    <button class="link-button">Login</button>
+    <button class="cyan-button">Sign Up</button>
+  </div>
+
+  <img *ngIf="isMobile" [ngSrc]="'assets/images/icon-hamburger.svg'" height="15" width="30" alt="hamburger icon">
+</div>

@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'colors';
+
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Poppins, serif;
+  font-weight: 500;
+  color: $very-dark-blue;
+}
+
+a {
+  font-weight: 700;
+  color: $grayish-violet;
+}
+
+a:hover {
+  color: $very-dark-blue;
+}
+
+.text-grayish-violet {
+  color: $grayish-violet;
+}
+
+.link-button {
+  font-weight: 700;
+  color: $grayish-violet;
+}
+
+.link-button:hover {
+  color: $very-dark-blue;
+}
+
+.cyan-button {
+  color: white;
+  background-color: $cyan;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+}
+
+.cyan-button:hover {
+  background-color: $cyan-lighter;
+}
+
+.illustration-work {
+  margin-right: -5rem;
+}
