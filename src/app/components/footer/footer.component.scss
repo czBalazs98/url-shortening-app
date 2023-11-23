@@ -1,0 +1,13 @@
+@import "../../../colors";
+
+.boost-section {
+  background-color: $dark-violet;
+  background-image: url("/assets/images/bg-boost-mobile.svg");
+}
+
+@media screen and (min-width: 640px) {
+
+  .boost-section {
+    background-image: url("/assets/images/bg-boost-desktop.svg");
+  }
+}

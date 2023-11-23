@@ -23,13 +23,45 @@ body {
   color: $very-dark-blue;
 }
 
-a {
+body.mobile-nav-opened {
+  overflow: hidden;
+}
+
+.header-link {
   font-weight: 700;
   color: $grayish-violet;
 }
 
-a:hover {
+.header-link:hover {
   color: $very-dark-blue;
+}
+
+.footer-link {
+  color: $grayish-violet;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.white-link {
+  color: white;
+}
+
+.white-link:hover {
+  color: $grayish-violet;
+}
+
+.bg-gray {
+  background-color: $gray;
+}
+
+.bg-dark-violet {
+  background-color: $dark-violet;
+}
+
+.bg-very-dark-violet {
+  background-color: $very-dark-violet;
 }
 
 .text-grayish-violet {

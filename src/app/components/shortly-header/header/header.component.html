@@ -1,14 +1,14 @@
-<div class="flex px-12 sm:px-24 py-6 mb-12">
+<div class="flex bg-white px-12 sm:px-24 py-6 mb-6 sm:mb-12">
 
   <div class="flex flex-grow space-x-8 items-center">
     <img [ngSrc]="'assets/images/logo.svg'" alt="shortly logo" height="33" width="121">
 
     <div *ngIf="!isMobile" class="space-x-8">
-      <a href="#">Features</a>
+      <a class="header-link" href="#">Features</a>
 
-      <a href="#">Pricing</a>
+      <a class="header-link" href="#">Pricing</a>
 
-      <a href="#">Resources</a>
+      <a class="header-link" href="#">Resources</a>
     </div>
   </div>
 
@@ -17,5 +17,8 @@
     <button class="cyan-button">Sign Up</button>
   </div>
 
-  <img *ngIf="isMobile" [ngSrc]="'assets/images/icon-hamburger.svg'" height="15" width="30" alt="hamburger icon">
+  <button *ngIf="isMobile" (click)="toggleMobileNav()">
+    <img [ngSrc]="'assets/images/icon-hamburger.svg'" height="15" width="30" alt="hamburger icon">
+  </button>
 </div>
+<app-mobile-nav *ngIf="isMobileNavOpen"></app-mobile-nav>
