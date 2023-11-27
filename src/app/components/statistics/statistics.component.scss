@@ -1,0 +1,23 @@
+@import "../../../colors";
+
+.statistics-card-container {
+  &::before {
+    content: "";
+    background-color: $cyan;
+    height: 100%;
+    width: 0.25rem;
+    position: absolute;
+    left: 50%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .statistics-card-container {
+    &::before {
+      top: 50%;
+      left: 0;
+      height: 0.25rem;
+      width: 100%;
+    }
+  }
+}
