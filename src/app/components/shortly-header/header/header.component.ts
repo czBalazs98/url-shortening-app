@@ -16,7 +16,7 @@ export class HeaderComponent {
   isMobileNavOpen: boolean = false;
 
   ngOnInit() {
-    this.isMobile = window.screen.width < 1024;
+    this.isMobile = window.screen.width < 768;
   }
 
   toggleMobileNav() {
