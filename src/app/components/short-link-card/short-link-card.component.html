@@ -1,0 +1,17 @@
+<div
+  class="bg-white rounded-md flex flex-col lg:flex-row px-4 py-4 lg:px-8 mt-3 items-center space-y-2 lg:space-y-0 lg:mx-8">
+  <a class="mr-auto w-full lg:w-1/3 whitespace-nowrap overflow-hidden text-ellipsis" href="{{shortLink.longLink}}"
+     target="_blank">{{shortLink.longLink}}</a>
+
+  <hr class="w-full lg:w-0">
+
+  <a class="mr-auto lg:mr-6 color-cyan w-full lg:w-auto"
+     href="{{shortLink.shortLink}}" target="_blank">{{shortLink.shortLink}}</a>
+
+  <button #copyButton class="cyan-button medium-rounded w-full lg:w-auto"
+          (click)="copyToClipboard(shortLink.shortLink)"
+          [ngClass]="isCopied ? 'copied' : ''">
+    Copy
+  </button>
+</div>
+

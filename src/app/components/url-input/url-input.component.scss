@@ -1,0 +1,17 @@
+@import "../../../colors";
+
+.url-input-container {
+  margin-top: -10rem;
+}
+
+.url-input {
+  background-image: url("/assets/images/bg-shorten-mobile.svg");
+  background-color: $dark-violet;
+}
+
+@media screen and (min-width: 640px) {
+
+  .url-input {
+    background-image: url("/assets/images/bg-shorten-desktop.svg");
+  }
+}
