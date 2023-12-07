@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ShortLinkCardComponent } from './short-link-card.component';
+import {ShortLinkCardComponent} from './short-link-card.component';
 
 describe('ShortLinkCardComponent', () => {
   let component: ShortLinkCardComponent;
@@ -10,8 +10,8 @@ describe('ShortLinkCardComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ShortLinkCardComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(ShortLinkCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

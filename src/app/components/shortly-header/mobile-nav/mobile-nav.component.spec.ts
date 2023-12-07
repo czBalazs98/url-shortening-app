@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { MobileNavComponent } from './mobile-nav.component';
+import {MobileNavComponent} from './mobile-nav.component';
 
 describe('MobileNavComponent', () => {
   let component: MobileNavComponent;
@@ -10,8 +10,8 @@ describe('MobileNavComponent', () => {
     await TestBed.configureTestingModule({
       imports: [MobileNavComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(MobileNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

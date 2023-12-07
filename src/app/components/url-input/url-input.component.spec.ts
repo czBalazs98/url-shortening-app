@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UrlInputComponent } from './url-input.component';
+import {UrlInputComponent} from './url-input.component';
 
 describe('UrlInputComponent', () => {
   let component: UrlInputComponent;
@@ -10,8 +10,8 @@ describe('UrlInputComponent', () => {
     await TestBed.configureTestingModule({
       imports: [UrlInputComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(UrlInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

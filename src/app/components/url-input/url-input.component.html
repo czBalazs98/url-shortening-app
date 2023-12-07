@@ -5,14 +5,14 @@
              [ngClass]="linkControl.invalid && linkControl.dirty ? 'border-red-400 placeholder-red-400' : ''"
              class="w-full  rounded-md px-4 py-2 outline-none border-2"
              placeholder="Shorten a link here..."
-             type="text">
+             type="text" (keyup.enter)="shortenUrl()">
       <p *ngIf="linkControl.invalid && linkControl.dirty"
          class="text-red-400 text-sm">
         Please add a link
       </p>
     </div>
 
-    <button class="cyan-button medium-rounded flex-shrink-0">Shorten It!</button>
+    <button class="cyan-button medium-rounded flex-shrink-0" (click)="shortenUrl()">Shorten It!</button>
   </div>
 
   <div>

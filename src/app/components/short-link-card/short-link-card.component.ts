@@ -1,9 +1,8 @@
 import {Component, ElementRef, Input, ViewChild} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule} from '@angular/common';
 import {ShortLink} from "../../model/short-link";
 
 import * as clipboard from "clipboard-polyfill";
-import {timeout} from "rxjs";
 
 @Component({
   selector: 'app-short-link-card',
