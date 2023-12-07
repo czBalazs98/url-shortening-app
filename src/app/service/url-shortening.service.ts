@@ -7,14 +7,10 @@ import {Observable} from "rxjs";
 })
 export class UrlShorteningService {
 
-  private apiUrlEnvVar = import.meta.env.NG_APP_API_URL;
-
-  private apiUrl = this.apiUrlEnvVar ? `${import.meta.env.NG_APP_API_URL}/api/v1/shorten` : 'api/shorten';
-
   constructor(private http: HttpClient) {
   }
 
   shortenUrl(url: string): Observable<{ result_url: string }> {
-    return this.http.post<{ result_url: string }>(this.apiUrl, {url: url});
+    return this.http.post<{ result_url: string }>('api/shorten', {url: url});
   }
 }
