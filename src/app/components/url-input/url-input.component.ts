@@ -22,6 +22,10 @@ export class UrlInputComponent {
   constructor(private urlShorteningService: UrlShorteningService, private notification: NzNotificationService) {
   }
 
+  ngOnInit() {
+    this.links = JSON.parse(localStorage.getItem('links')!);
+  }
+
   shortenUrl() {
     if (this.linkControl.valid) {
       const url = encodeURI(this.linkControl.value!);
@@ -29,6 +33,7 @@ export class UrlInputComponent {
         .subscribe({
           next: response => {
             this.links.push({longLink: url, shortLink: response.result_url});
+            localStorage.setItem('links', JSON.stringify(this.links));
             this.linkControl.setValue('');
             this.linkControl.markAsPristine();
           },
