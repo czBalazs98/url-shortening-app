@@ -46,4 +46,13 @@ export class UrlInputComponent {
     }
   }
 
+  removeLink(link: ShortLink) {
+    const index = this.links.indexOf(link);
+
+    if (index !== -1) {
+      this.links.splice(index, 1);
+      localStorage.setItem('links', JSON.stringify(this.links));
+    }
+  }
+
 }

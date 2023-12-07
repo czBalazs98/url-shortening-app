@@ -16,7 +16,8 @@
   </div>
 
   <div>
-    <app-short-link-card *ngFor="let link of links" [shortLink]="link"></app-short-link-card>
+    <app-short-link-card *ngFor="let link of links" [shortLink]="link"
+                         (removeEvent)="removeLink(link)"></app-short-link-card>
   </div>
 
 </div>
