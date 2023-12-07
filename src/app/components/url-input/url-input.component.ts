@@ -23,7 +23,8 @@ export class UrlInputComponent {
   }
 
   ngOnInit() {
-    this.links = JSON.parse(localStorage.getItem('links')!);
+    const localLinks = localStorage.getItem('links');
+    this.links = localLinks ? JSON.parse(localLinks) : [];
   }
 
   shortenUrl() {
