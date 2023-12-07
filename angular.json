@@ -68,10 +68,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "url-shortening-app:build:production"
+              "buildTarget": "url-shortening-app:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "buildTarget": "url-shortening-app:build:development"
+              "buildTarget": "url-shortening-app:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
