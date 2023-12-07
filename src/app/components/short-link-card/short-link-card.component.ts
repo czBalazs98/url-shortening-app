@@ -1,5 +1,5 @@
-import {Component, ElementRef, Input, ViewChild} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {Component, ElementRef, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {ShortLink} from "../../model/short-link";
 
 import * as clipboard from "clipboard-polyfill";
@@ -7,7 +7,7 @@ import * as clipboard from "clipboard-polyfill";
 @Component({
   selector: 'app-short-link-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './short-link-card.component.html',
   styleUrl: './short-link-card.component.scss'
 })
@@ -20,6 +20,9 @@ export class ShortLinkCardComponent {
   copyButton!: ElementRef;
 
   isCopied: boolean = false;
+
+  @Output()
+  removeEvent = new EventEmitter<void>();
 
   copyToClipboard(value: string) {
     clipboard.writeText(value);

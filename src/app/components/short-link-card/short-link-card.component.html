@@ -8,10 +8,16 @@
   <a class="mr-auto lg:mr-6 color-cyan w-full lg:w-auto"
      href="{{shortLink.shortLink}}" target="_blank">{{shortLink.shortLink}}</a>
 
-  <button #copyButton class="cyan-button medium-rounded w-full lg:w-auto"
-          (click)="copyToClipboard(shortLink.shortLink)"
-          [ngClass]="isCopied ? 'copied' : ''">
-    Copy
-  </button>
-</div>
+  <div class="flex space-x-3 w-full lg:w-auto">
+    <button #copyButton class="cyan-button medium-rounded flex-grow"
+            (click)="copyToClipboard(shortLink.shortLink)"
+            [ngClass]="isCopied ? 'copied' : ''">
+      Copy
+    </button>
 
+    <button class="delete-button" (click)="removeEvent.emit()">
+      <img [ngSrc]="'assets/images/logo-trash.svg'" height="16"
+           width="14" alt="delete icon">
+    </button>
+  </div>
+</div>
