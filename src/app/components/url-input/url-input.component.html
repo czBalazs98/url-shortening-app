@@ -6,18 +6,20 @@
              class="w-full  rounded-md px-4 py-2 outline-none border-2"
              placeholder="Shorten a link here..."
              type="text" (keyup.enter)="shortenUrl()">
-      <p *ngIf="linkControl.invalid && linkControl.dirty"
-         class="text-red-400 text-sm">
-        Please add a link
-      </p>
+      @if(linkControl.invalid && linkControl.dirty) {
+        <p class="text-red-400 text-sm">
+          Please add a link
+        </p>
+      }
     </div>
 
     <button class="cyan-button medium-rounded flex-shrink-0" (click)="shortenUrl()">Shorten It!</button>
   </div>
 
   <div>
-    <app-short-link-card *ngFor="let link of links" [shortLink]="link"
-                         (removeEvent)="removeLink(link)"></app-short-link-card>
+    @for(link of links; track link.longLink) {
+      <app-short-link-card [shortLink]="link" (removeEvent)="removeLink(link)"></app-short-link-card>
+    }
   </div>
 
 </div>

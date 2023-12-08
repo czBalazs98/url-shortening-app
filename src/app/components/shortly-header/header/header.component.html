@@ -3,22 +3,30 @@
   <div class="flex flex-grow space-x-8 items-center">
     <img [ngSrc]="'assets/images/logo.svg'" alt="shortly logo" height="33" width="121">
 
-    <div *ngIf="!isMobile" class="space-x-8">
-      <a class="header-link" href="#">Features</a>
+    @if (!isMobile) {
+      <div class="space-x-8">
+        <a class="header-link" href="#">Features</a>
 
-      <a class="header-link" href="#">Pricing</a>
+        <a class="header-link" href="#">Pricing</a>
 
-      <a class="header-link" href="#">Resources</a>
+        <a class="header-link" href="#">Resources</a>
+      </div>
+    }
+  </div>
+
+  @if (!isMobile) {
+    <div class="flex space-x-8 items-center">
+      <button class="link-button">Login</button>
+      <button class="cyan-button">Sign Up</button>
     </div>
-  </div>
+  }
 
-  <div *ngIf="!isMobile" class="flex space-x-8 items-center">
-    <button class="link-button">Login</button>
-    <button class="cyan-button">Sign Up</button>
-  </div>
-
-  <button *ngIf="isMobile" (click)="toggleMobileNav()">
-    <img [ngSrc]="'assets/images/icon-hamburger.svg'" height="15" width="30" alt="hamburger icon">
-  </button>
+  @if (isMobile) {
+    <button (click)="toggleMobileNav()">
+      <img [ngSrc]="'assets/images/icon-hamburger.svg'" height="15" width="30" alt="hamburger icon">
+    </button>
+  }
 </div>
-<app-mobile-nav *ngIf="isMobileNavOpen"></app-mobile-nav>
+@if (isMobileNavOpen) {
+  <app-mobile-nav></app-mobile-nav>
+}
